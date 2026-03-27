@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+output/
+# Uncomment below if you want to also exclude transcripts from git
+# transcripts/
