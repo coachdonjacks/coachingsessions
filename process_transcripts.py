@@ -27,14 +27,14 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 
 EXTRACTION_PROMPT = """You are analyzing a coaching session transcript. Extract the following in JSON format:
 
-{
+{{
   "main_topics": ["list of 3-6 primary topics discussed"],
   "key_takeaways": ["list of 3-6 concrete insights or lessons from this session"],
   "analogies_used": ["any metaphors, stories, or analogies the coach used to illustrate a point"],
   "action_items": ["specific actions the client committed to or was encouraged to take"],
   "emotional_themes": ["recurring emotional patterns, fears, or breakthroughs observed"],
   "notable_quotes": ["1-3 powerful or memorable statements from the session (paraphrase ok)"]
-}
+}}
 
 Be concise and specific. Extract only what is genuinely present in the transcript.
 If a category has nothing relevant, return an empty list.
