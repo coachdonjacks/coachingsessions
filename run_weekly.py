@@ -120,10 +120,10 @@ def run(days: int = 7, send: bool = True, recipient: str | None = None) -> None:
     print(f"  WEEKLY COACHING WORKFLOW  —  {date.today().strftime('%B %d, %Y')}")
     print("=" * 60)
 
-    # ── Step 1: Fetch emails ──────────────────────────────────────────
-    print(f"\n[1/4] Fetching Zoom summary emails from Gmail (last {days} days)...")
-    from fetch_email_summaries import fetch_summaries
-    fetched = fetch_summaries(days=days)
+    # ── Step 1: Fetch transcripts from Zoom ──────────────────────────
+    print(f"\n[1/4] Fetching Zoom cloud transcripts (last {days} days)...")
+    from fetch_zoom_transcripts import fetch_transcripts
+    fetched = fetch_transcripts(days=days)
 
     transcript_count = len(list(TRANSCRIPTS_DIR.glob("*.txt")))
     if transcript_count == 0:
